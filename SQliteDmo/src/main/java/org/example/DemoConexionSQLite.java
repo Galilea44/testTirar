@@ -14,7 +14,7 @@ public class DemoConexionSQLite {
             Class.forName("org.sqlite.JDBC");
             conexion = DriverManager.getConnection(DB_URL);
             Statement stm = conexion.createStatement();
-            ResultSet rst = stm.executeQuery("SELECT * FROM Libros");
+            ResultSet rst = stm.executeQuery("SELECT * FROM Libros; ");
             while (rst.next()){
                 System.out.println(rst.getString(1) + " " + rst.getString(2));
             }
